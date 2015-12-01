@@ -1,22 +1,8 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controller', [])
 
-.controller('AppCtrl', function($scope) {})
-
-.controller('MainCtrl', function($scope, Mains) {
-
-	$scope.main = Mains.all();
-
-	$scope.remove = function(main) {
-		Mains.remove(main)
-	};
-})
-
-.controller('MainDeatilCtrl', function($scope, $stateParams, Main) {
-	$scope.main = Mains.get($stateParams.chatId)
-})
-
-.controller('AppDeatlCtrl', function($scope) {
-	$scope.settings = {
-		enableFriends: true
-	};
-})
+.controller('RanAddCtrl', function($scope, Randoms) {
+	$scope.randoms = Randoms.all();
+	$scope.add = function(itme) {
+		Randoms.add(itme);
+	}
+});

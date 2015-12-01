@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic', 'starter.controller', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -29,14 +29,21 @@ angular.module('starter', ['ionic'])
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  $stateProvider
 
-  .state('home', {
-    url: '/',
-    templateUrl: '/views/main.html'
-  })
+  // $stateProvider
+  // .state('main', {
+  //   url: '/main',
+  //   template
+  // })
+  // $urlRouterProvider.otherwise('/home/dash');
 
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/');
+    $stateProvider
+    .state('home', {
+        url: '/home',
+        templateUrl: 'views/main.html'
+    })
+
+  // // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/home');
 
 });
