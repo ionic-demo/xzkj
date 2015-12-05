@@ -1,1 +1,20 @@
-hello world
+<ion-view title="test" ng-controller="RanAddCtrl">
+    <div class="list list-inset">
+       <div ng-repeat="(key, value) in options track by $index" class="item">
+       {{key}}：{{value.data}}
+       </div>
+    </div>
+    <div class="list">
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+                <input type="text" ng-model="data" placeholder="选项">
+            </label>
+            <button class="button button-small" ng-click="add(data)"> 添加</button>
+        </div>
+    </div>
+    <div class="bar bar-footer bar-balanced">
+        <div class="title" ng-click="start()">
+            开始
+        </div>
+    </div>
+</ion-view>
