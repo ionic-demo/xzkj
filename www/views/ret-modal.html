@@ -1,0 +1,11 @@
+<ion-view >
+	<ion-content>
+	  <h1>{{ret}}</h1>
+	  <h2 ng-if="count <= 2">好了就这么决定了去做吧</h2>
+	  <h2 ng-if="count > 2">你都选了三次了，选好就去做吧。</h2>
+	  <div class="button-bar">
+	  <button class="button button-positive" ng-click="modal.hide()">好，就他了</button>
+	  <button class="button button-positive" ng-click="getRetAgain()">不行，再来一次</button>
+	  </div>
+	</ion-content>	
+</ion-view>

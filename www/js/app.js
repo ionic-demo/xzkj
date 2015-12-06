@@ -36,14 +36,23 @@ angular.module('starter', ['ionic', 'starter.controller', 'starter.services'])
   //   template
   // })
   // $urlRouterProvider.otherwise('/home/dash');
-
     $stateProvider
-    .state('home', {
-        url: '/home',
-        templateUrl: 'views/main.html'
+
+    .state('app', {
+        url: '/app',
+        abstract: true,
+        templateUrl: 'views/menu.html'
     })
+    .state('app.home', {
+        url: '/home',
+        views: {
+            'menuContent': {
+                templateUrl: 'views/main.html'
+            }
+        }
+    });
 
   // // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/app/home');
 
 });

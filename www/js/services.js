@@ -2,11 +2,11 @@ angular.module('starter.services', [])
 
 .factory('Randoms', function() {
 	var options = [
-		{
-			'id': 0,
-			'data': '你好',
-			'Probability': 0
-		}
+		// {
+		// 	'id': 0,
+		// 	'data': '你好',
+		// 	'Probability': 0
+		// }
 	];
 
 	return {
